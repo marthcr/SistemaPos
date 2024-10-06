@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D4F04C5-E160-4A7E-B2F3-E4A7213F7946}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaPos</RootNamespace>
+    <AssemblyName>SistemaPos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.3.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\D_Inventario.cs" />
+    <Compile Include="Datos\D_Usuarios.cs" />
+    <Compile Include="Entidades\E_Clientes.cs" />
+    <Compile Include="Entidades\E_Empresas.cs" />
+    <Compile Include="Entidades\E_Familias.cs" />
+    <Compile Include="Entidades\E_Inventario.cs" />
+    <Compile Include="Entidades\E_Proveedores.cs" />
+    <Compile Include="Entidades\E_Usuarios.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Articulos.Designer.cs">
+      <DependentUpon>Frm_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_EditarUsuario.Designer.cs">
+      <DependentUpon>Frm_EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_FamiliasInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_FamiliasInv.Designer.cs">
+      <DependentUpon>Frm_FamiliasInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_NuevaFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_NuevaFamilia.Designer.cs">
+      <DependentUpon>Frm_NuevaFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_NuevoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_NuevoArticulo.Designer.cs">
+      <DependentUpon>Frm_NuevoArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_NuevoUuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_NuevoUuarios.Designer.cs">
+      <DependentUpon>Frm_NuevoUuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Principal.Designer.cs">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Inventario.Designer.cs">
+      <DependentUpon>Frm_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Usuarios.Designer.cs">
+      <DependentUpon>Frm_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Frm_Articulos.resx">
+      <DependentUpon>Frm_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_EditarUsuario.resx">
+      <DependentUpon>Frm_EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_FamiliasInv.resx">
+      <DependentUpon>Frm_FamiliasInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_NuevaFamilia.resx">
+      <DependentUpon>Frm_NuevaFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_NuevoArticulo.resx">
+      <DependentUpon>Frm_NuevoArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_NuevoUuarios.resx">
+      <DependentUpon>Frm_NuevoUuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_Inventario.resx">
+      <DependentUpon>Frm_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_Usuarios.resx">
+      <DependentUpon>Frm_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MARTHDF-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descargar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descargar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envio-al-mundo-entero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\articulos-avanzados.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
